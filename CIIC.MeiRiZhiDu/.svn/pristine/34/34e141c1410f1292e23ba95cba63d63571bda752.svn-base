@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <title>智服务</title>
+    <script language="javascript" type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/common.js?version=1.1.1"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script>
+        // var wxtitle = '中智上海人力资源服务产品';// 分享标题
+        // var wxdesc = '全方位人力资源服务解决方案';// 分享描述
+        // var wxImg = 'CIIC_logo2.jpg';//分享图标
+        //var apiURL = 'zhidu.ciicsh.com';
+        $(function () {
+            $.ajax({
+                url: "http://" + apiURL + "/api/values/GetWxConfigObj?url=" + encodeURIComponent(window.location.href), //apiURL common.js
+                type: "POST",
+                contentType: "application/json",
+                //async: false,
+                success: function (data) {
+                    //console.log(data);
+                    var obj = data.result;
+                    obj.debug = false;
+                    wx.config(obj);
+                    wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
+                        wx.updateAppMessageShareData({
+                            title: wxtitle, // 分享标题 common.js
+                            desc: wxdesc, // 分享描述 common.js
+                            link: window.location.href, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                            imgUrl: location.protocol + '//' + document.domain + '/images/' + wxImg, // 分享图标
+                            success: function () {
+                                // 设置成功
+                            }
+                        });
+
+                        wx.updateTimelineShareData({
+                            title: wxtitle, // 分享标题
+                            desc: wxdesc,
+                            link: window.location.href, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                            imgUrl: location.protocol + '//' + document.domain + '/images/' + wxImg, // 分享图标
+                            success: function () {
+                                // 设置成功
+                            }
+                        })
+                    });
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="title"><img src="images/title_img_1.png?version=1.1.1" alt="" /></div>
+        <div class="index-btn-box">
+            <div class="index-btn-item flex hr" onclick="window.location='index_hr.html'">人事服务</div>
+            <div class="index-btn-item flex major" onclick="window.location='index_pro.html'">专业服务</div>
+            <div class="index-btn-item flex health" onclick="window.location='https://s.eqxiu.cn/s/NMGAdlQw'">健康管理</div>
+            <div class="index-btn-item flex welfare" onclick="window.location='https://v.eqxiu.cn/s/qrp826CZ'">福利管理
+            </div>
+            <div class="index-btn-item flex platform" onclick="window.location='https://a.eqxiu.com/s/5Tq6GOU9?bt=yxy'">
+                平台服务</div>
+        </div>
+        <div class="index-btns-box flex">
+            <div class="index-btns-item flex" onclick="window.location='index_hr.html'">
+                <i class="iconfont icon-renshi"></i>
+                <p>人事服务</p>
+            </div>
+            <div class="index-btns-item flex" onclick="window.location='index_pro.html'">
+                <i class="iconfont icon-gongwenbaoshangyehetonghezuogongzuoxianxing"></i>
+                <p>专业服务</p>
+            </div>
+            <div class="index-btns-item flex" onclick="window.location='https://a.eqxiu.com/s/5Tq6GOU9?bt=yxy'">
+                <i class="iconfont icon-pingtai"></i>
+                <p>平台服务</p>
+            </div>
+
+            <div class="index-btns-item flex" onclick="window.location='https://s.eqxiu.cn/s/F5KNrCsv'">
+                <i class="iconfont icon-yiliao"></i>
+                <p>健康管理</p>
+            </div>
+            <div class="index-btns-item flex" onclick="window.location='https://v.eqxiu.cn/s/qrp826CZ'">
+                <i class="iconfont icon-fuli"></i>
+                <p>福利管理</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

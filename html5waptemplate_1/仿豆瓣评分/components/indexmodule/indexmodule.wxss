@@ -1,0 +1,23 @@
+.items-group{
+    padding:40rpx;
+    background: #fff;
+}
+.items-group .items-top{
+    font-size:36rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.items-group .items-top .items-title{
+    color: #000;
+}
+
+.items-group .items-top .items-more{
+    color:#072;
+}
+
+.items-scroll-view{
+    margin-top:40rpx;
+    width:100%;
+    height:400rpx;
+    white-space: nowrap;
+}

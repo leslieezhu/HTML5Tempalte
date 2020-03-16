@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {margin: 0; padding: 0; box-sizing: border-box; -webkit-overflow-scrolling: touch;}
+
+html {font-size: calc(100vw/7.5);}
+body {overflow-x: hidden; color: #333;}
+body.blue {background: -webkit-linear-gradient(#6db2e4, #2372ca);  background: linear-gradient(#6db2e4, #2372ca);}
+img,button {display: block;}
+.flex {display: -webkit-flex; display: flex;}
+
+.page {min-height: 100vh;}
+.page.hr {background-image: url("../images/hr_bg.png"); background-size: 100%; background-position: center 95%; background-repeat: no-repeat;}
+.page.pro {background-image: url("../images/pro_bg.png"); background-size: 100%; background-position: center 95%; background-repeat: no-repeat;}
+.page .title {padding: .36rem .72rem;}
+.page .title > img {width: 4.95rem;}
+.page .index-btn-box {position: relative; width: 7.5rem; height: 7.18rem; background-image: url("../images/index_btn_box_bg.png"); background-size: 100%; background-repeat: no-repeat;}
+.page .index-btn-box .index-btn-item {color: #fff; font-size: .3rem; font-weight: bold; justify-content: center; align-items: center; border-radius: 50%; position: absolute;}
+.page .index-btn-box .index-btn-item.hr {background-color: #ff8a00; box-shadow: 0 .15rem .2rem rgba(255,138,0,.4); width: 1.54rem; height: 1.54rem; left: 2.16rem; top: 0;}
+.page .index-btn-box .index-btn-item.major {background-color: #5b82ff; box-shadow: 0 .15rem .2rem rgba(91,130,255,.3); width: 2.27rem; height: 2.27rem; left: 4.83rem; top: .55rem;}
+.page .index-btn-box .index-btn-item.health {background-color: #22b9c6; box-shadow: 0 .15rem .2rem rgba(34,185,198,.3); width: 1.82rem; height: 1.82rem; left: .4rem; top: 2.23rem;}
+.page .index-btn-box .index-btn-item.welfare {background-color: #ffcc42; box-shadow: 0 .15rem .2rem rgba(255,204,66,.3); width: 1.38rem; height: 1.38rem; left: 5.36rem; top: 4.57rem;}
+.page .index-btn-box .index-btn-item.platform {background-color: #0075c2; box-shadow: 0 .15rem .2rem rgba(0,117,194,.3); width: 1.46rem; height: 1.46rem; left: 1.22rem; top: 5.37rem;}
+.page .index-btns-box {margin-top: .6rem; padding: 0 .6rem; flex-wrap: wrap;}
+.page .index-btns-box .index-btns-item {width: 2rem; height: .7rem; justify-content: center; align-items: center; border-radius: .2rem; box-shadow: 0 .15rem .2rem rgba(164,173,202,.3); margin-bottom: .3rem; margin-right: .1rem;}
+.page .index-btns-box .index-btns-item:nth-child(3n) {margin-right: 0;}
+.page .index-btns-box .index-btns-item i {font-size: .3rem; color: #004898; margin-right: .13rem;}
+.page .index-btns-box .index-btns-item p {font-size: .3rem;}
+.page .hr-event-box {width: 5.65rem; height: 8.14rem; background-image: url("../images/hr_box_bg.png"); background-size: 100%; background-repeat: no-repeat; margin-top: .25rem; margin-left: 1.8rem; padding-left: .6rem; padding-top: .82rem; margin-bottom: 1rem;}
+.page .event-box-item {width: 1.5rem; height: 1.5rem; border-radius: 50%; border: #fff 1px solid; justify-content: center; align-items: center; color: #fff;  text-align: center; margin-bottom: 1.1rem;}
+.page .event-box-item > div {max-height: 1.3rem;}
+.page .event-box-item i {font-size: .6rem; margin-bottom: .1rem; display: block; margin: 0 auto;}
+.page .event-box-item p {font-size: .24rem; font-weight: bold; width: 100%; display: block;}
+.page .hr-event-box .event-box-item:nth-child(2) {margin-left: 1.25rem;}
+.page .pro-event-box {width: 6.71rem; height: 8.14rem; background-image: url("../images/pro_box_bg1.png"); background-size: 100%; background-repeat: no-repeat; margin-top: .25rem; margin-left: .82rem; padding-top: .82rem; flex-wrap: wrap; margin-bottom: 1rem;}
+.page .pro-event-box .event-box-item {margin-right: .4rem;}
+/* .page .pro-event-box .event-box-item:first-child {margin-left: 1.5rem;} */
+.page .pro-event-box .event-box-item:first-child {margin-left: 0.5rem;}
+.page .pro-event-box .event-box-item:nth-child(3) {margin-left: -.14rem;}
+/* .page .pro-event-box .event-box-item:nth-child(6) {margin-left: .6rem;} */
+.page .pro-event-box .event-box-item:nth-child(7) {margin-left: 0.5rem;}

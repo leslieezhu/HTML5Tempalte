@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <title></title>
+    <style>
+            .page a {
+                text-decoration:none;
+                color:#333;   
+            }
+        </style>
+</head>
+
+<body class="blue">
+
+    <div class="page pro">
+        <div class="title"><img src="images/title_img_white.png" alt="" /></div>
+        <div class="pro-event-box flex">
+            <a href="https://e.eqxiu.com/s/tqMDyLb8?bt=yxy">
+                <div class="event-box-item flex">
+                    <div>
+                        <i class="iconfont icon-jihua"></i>
+                        <p>圆梦计划</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://u.eqxiu.com/s/uQKzPpTJ?bt=yxy">
+                <div class="event-box-item flex">
+                        <div>
+                            <i class="iconfont icon-xinxihuaguanli"></i>
+                            <p>文档信息化</p>
+                        </div>
+                </div> 
+            </a>
+            <a href="https://e.eqxiu.com/s/J9hvuWZc?bt=yxy">
+                <div class="event-box-item flex">
+                    <div>
+                        <i class="iconfont icon-qianbao"></i>
+                        <p>财税与薪税<br />服务</p><br />
+                    </div>
+                </div>  
+            </a>
+            <a href="https://x.eqxiu.com/s/N2fTv01h?bt=yxy">
+                <div class="event-box-item flex">
+                    <div>
+                        <i class="iconfont icon-addpeople"></i>
+                        <p>外籍人才<br />服务</p>
+                    </div>
+                </div>  
+            </a>         
+            <a href="https://q.eqxiu.com/s/cF3VeNTp?bt=yxy">
+                <div class="event-box-item flex">
+                    <div>
+                        <i class="iconfont icon-forensic"></i>
+                        <p>法务咨询<br />服务</p>
+                    </div>
+                </div>
+            </a>           
+            <a href="https://c.eqxiu.com/s/II1velAI?bt=yxy">
+                <div class="event-box-item flex">
+                    <div>
+                        <i class="iconfont icon--"></i>
+                        <p>雇前调查</p>
+                    </div>
+                </div> 
+            </a>
+            
+            <a href="https://b.eqxiu.com/s/AjZFc6Rf?bt=yxy">
+                    <div class="event-box-item flex">
+                            <div>
+                                <i class="iconfont icon-xiaoyuanzhaopin"></i>
+                                <p>校园招聘</p>
+                            </div>
+                        </div> 
+            </a>
+            
+            <a href="https://a.eqxiu.com/s/TUxmCUYe?bt=yxy">
+                <div class="event-box-item flex">
+                        <div>
+                            <i class="iconfont icon-gongwenbao"></i>
+                            <p>猎聘服务</p>
+                        </div>
+                    </div> 
+            </a>
+            
+        </div>
+    </div>
+
+    <script language="javascript" type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</body>
+</html>

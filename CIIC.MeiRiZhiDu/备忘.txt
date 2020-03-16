@@ -1,0 +1,2 @@
+
+index_test.html //备忘 智服务HomePage,纯静实践版,所有的CSS都在页面上

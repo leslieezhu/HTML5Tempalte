@@ -1,0 +1,4 @@
+<searchbar isnavigator="{{true}}"></searchbar>
+<indexmodule title="影院热映" moreurl="/pages/list/list?type=1" items="{{movits}}"></indexmodule>
+<indexmodule title="电视剧" moreurl="/pages/list/list?type=2" items="{{tvplay}}"></indexmodule>
+<indexmodule title="综艺" moreurl="/pages/list/list?type=3" items="{{variety}}"></indexmodule>

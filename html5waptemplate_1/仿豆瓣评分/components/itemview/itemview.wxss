@@ -1,0 +1,24 @@
+.items-navigator{
+    width:200rpx;
+    margin-right:20rpx;
+    display: inline-block;
+}
+.items-navigator .items-box{
+    width:100%;
+}
+.items-navigator .item{
+    width:100%;
+    height:284rpx;
+}
+.items-navigator .item .thumbnail{
+    width:100%;
+    height:100%;
+}
+.items-navigator .item-title{
+    font-size: 28rpx;
+    text-align: center;
+    margin-top:20rpx;
+    margin-bottom:20rpx;
+    overflow: hidden;
+    text-overflow: emphasis;
+}

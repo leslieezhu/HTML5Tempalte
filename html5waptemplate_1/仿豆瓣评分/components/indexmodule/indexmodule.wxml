@@ -1,0 +1,9 @@
+<view class="items-group">
+    <view class="items-top">
+        <view class="items-title">{{title}}</view>
+        <navigator class="items-more" url="{{moreurl}}">查看更多</navigator>
+    </view>
+    <scroll-view class="items-scroll-view" scroll-x="{{true}}">
+        <itemview wx:for="{{items}}" wx:key="id" item="{{item}}"></itemview>
+    </scroll-view>
+</view>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+    <title>专业服务服页-单页面css设计实践</title>
+    <script language="javascript" type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script>
+
+    </script>
+    <style>
+        /* 全局性CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        html {
+            font-size: calc(100vw/7.5);
+        }
+
+        body {
+            overflow-x: hidden;
+            color: #333;
+        }
+
+        img,
+        button {
+            display: block;
+        }
+
+        .flex {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        /* 页面最外层容器设置.blue, TODO */
+        body.blue {
+            background: -webkit-linear-gradient(#6db2e4, #2372ca);
+            background: linear-gradient(#6db2e4, #2372ca);
+        }
+
+        /* 总样式,定义最外层的容器,这套模板所有页面都定义了class="page" */
+        .page {
+            min-height: 100vh;
+        }
+
+        /* 总容器第2层class="page pro" 用于设置背景图,背景之一 */
+        .page.pro {
+            background-image: url("../images/pro_bg.png");
+            background-size: 100%;
+            background-position: center 95%;
+            background-repeat: no-repeat;
+        }
+
+        /*页面第一部容器定位,即上部以img png方式设计的块的定位方式,同index_test.html*/
+        .page .title {
+            padding: .36rem .72rem;
+        }
+
+        .page .title>img {
+            width: 4.95rem;
+        }
+
+        /* 页面块2的容器设置,它也设置了一个背景图 */
+        .page .pro-event-box {
+            width: 6.71rem;
+            height: 8.14rem;
+            background-image: url("../images/pro_box_bg1.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: .25rem;
+            margin-left: .82rem;
+            padding-top: .82rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* 页面块2内元素容器设置定位,这里每个item用了5组CSS,学习这个元素是如何设计的 */
+        .page .pro-event-box .event-box-item {
+            margin-right: .4rem;
+        }
+
+        .page .event-box-item {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            border: #fff 1px solid;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 1.1rem;
+        }
+
+        .page .event-box-item>div {
+            max-height: 1.3rem;
+        }
+
+        .page .event-box-item i {
+            font-size: .6rem;
+            margin-bottom: .1rem;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .page .event-box-item p {
+            font-size: .24rem;
+            font-weight: bold;
+            width: 100%;
+            display: block;
+        }
+
+        /* 每行元素定位技巧 */
+        .page .pro-event-box .event-box-item:first-child {
+            margin-left: 0.5rem;
+        }
+
+        .page .pro-event-box .event-box-item:nth-child(3) {
+            margin-left: -.14rem;
+        }
+
+        .page .pro-event-box .event-box-item:nth-child(7) {
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+
+<!-- class="blue"设置背景颜色 -->
+
+<body class="blue">
+    <!-- 定义层class="page pro"用于绘制整个页面的背景图 -->
+    <div class="page pro">
+        <!-- 定义2层父节点,整个页面分2块 -->
+        <div class="title"><img src="images/title_img_white2.png" alt="" /></div>
+        <div class="pro-event-box flex">
+            <div class="event-box-item flex" onclick="window.location='https://v.eqxiu.cn/s/tqMDyLb8'">
+                <div>
+                    <i class="iconfont icon-jihua"></i>
+                    <p>圆梦计划</p>
+                </div>
+            </div>
+            <div class="event-box-item flex" onclick="window.location='https://g.eqxiu.com/s/uQKzPpTJ?bt=yxy'">
+                <div>
+                    <i class="iconfont icon-xinxihuaguanli"></i>
+                    <p>文档信息化</p>
+                </div>
+            </div>
+            <div class="event-box-item flex" onclick="window.location='https://s.eqxiu.cn/s/eV1jpR0L'">
+                <div>
+                    <i class="iconfont icon-zhongzhiicon_zhiyinghui"></i>
+                    <p>智樱会</p>
+                </div>
+            </div>
+            <div class="event-box-item flex" onclick="window.location='https://s.eqxiu.cn/s/II1velAI'">
+                <div>
+                    <i class="iconfont icon--"></i>
+                    <p>雇前调查</p>
+                </div>
+            </div>
+            <div class="event-box-item flex" onclick="window.location='https://s.eqxiu.cn/s/AjZFc6Rf'">
+                <div>
+                    <i class="iconfont icon-xiaoyuanzhaopin"></i>
+                    <p>校园招聘</p>
+                </div>
+            </div>
+            <div class="event-box-item flex" onclick="window.location='https://v.eqxiu.cn/s/TUxmCUYe'">
+                <div>
+                    <i class="iconfont icon-gongwenbao"></i>
+                    <p>猎聘服务</p>
+                </div>
+            </div>
+            <div class="event-box-item flex" onclick="window.location='https://v.eqxiu.cn/s/cF3VeNTp'">
+                <div>
+                    <i class="iconfont icon-forensic"></i>
+                    <p>法务咨询<br />服务</p>
+                </div>
+            </div>
+            <div class="event-box-item flex" onclick="window.location='https://i.eqxiu.com/s/J9hvuWZc?bt=yxy'">
+                <div>
+                    <i class="iconfont icon-qianbao"></i>
+                    <p>财税与薪税<br />服务</p>
+                    <br />
+                </div>
+            </div>
+            <div class="event-box-item flex" onclick="window.location='https://g.eqxiu.com/s/N2fTv01h?bt=yxy'">
+                <div>
+                    <i class="iconfont icon-addpeople"></i>
+                    <p>外籍人才<br />服务</p>
+                </div>
+            </div>
+
+        </div>
+</body>
+
+</html>

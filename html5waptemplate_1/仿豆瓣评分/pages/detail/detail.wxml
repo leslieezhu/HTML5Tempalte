@@ -1,0 +1,54 @@
+<view class="item-header">
+    <view class="item-title">{{item.desc.name}}</view>
+    <view class="item-detail">
+        <view class="left-detail">
+            <view class="item-rate">
+                <stars rate="{{item.desc.rate}}" starsize="30" fontsize="30" fontcolor="#333"></stars>
+                <text class="comment-persons">{{item.desc.persons}}人评论</text>
+            </view>
+            <view class="item-sud-detail">
+                <view class="item-type">
+                    {{item.desc.type}}
+                </view>
+                <view class="item-show">
+                    {{item.desc.show}}
+                </view>
+                <view class="item-actors">
+                    {{item.desc.actors}}
+                </view >
+            </view>
+        </view>
+        <view class="right-detail">
+            <image src="{{item.desc.img}}"></image>
+        </view>
+    </view>
+</view>
+
+<view class="item-tags">
+    <view class="item-tags-title">豆瓣成员常用标签</view>
+    <view class="item-tags-list">
+        <text wx:for="{{item.tag}}" wx:key="*this" wx:for-item="name">{{name}}</text>
+    </view>
+</view>
+
+<view class="comment-list-group">
+    <view class="comment-title">短评（1222）</view>
+
+    <view wx:for="{{item.comment}}" wx:key="user_name" wx:for-item="comment" class="comment-group">
+        <view class="left-comment">
+            <image class="avatar" src="{{comment.user_img}}"></image>
+        </view>
+        <view class="right-comment">
+            <view class="username-rate">
+                <text class="username">reuxo</text>
+                <stars istext="{{false}}" rate="{{comment.rate}}" starsize="30" fontsize="30" fontcolor="#333" ></stars>
+            </view>
+            <view class="release-time">{{comment.time}}</view>
+            <view class="content">
+                {{comment.content}}
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- <navigator class="more-comment">查看更多短评</navigator> -->
