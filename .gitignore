@@ -1,7 +1,7 @@
 # Editor directories and files
 .DS_Store
 node_modules/
-test/
+temp/
 .vs
 .svn
 .idea
