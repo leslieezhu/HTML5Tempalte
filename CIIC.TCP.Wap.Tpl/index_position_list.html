@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <title>智招聘-职位信息列表</title>
+    <script language="javascript" type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <!-- <script language="javascript" type="text/javascript" src="js/common.js?version=1.1.1"></script> -->
+    <script>
+
+
+    </script>
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="title">
+            <div class="top-sousou">
+                <form @submit.prevent action="#">
+                    <div class="form-div flex">
+                        <input type="search" placeholder="搜索公司/职位" @blur="animateWidth" v-model="SearchText"
+                            @keypress="search" ref="input" />
+                        <div class="out-i flex">
+                            <i class="icon iconfont iconmagnifier"></i>|<i class="icon iconfont iconfilter"></i>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="content">
+            <div class="index-btn-box">
+                <div class="postion-crumb flex">
+                    <div>职位信息(97)</div>
+                    <!-- <div class="align-ico">
+                        <i class="iconfont icon-gongwenbao"></i>
+                        <p>发布职位</p>
+                    </div> -->
+                </div>
+                <hr />
+                <div class="index-btn-item">
+                    <div class="line-1 flex">
+                        <div class="p-name">
+                            计算机开发工程师
+                        </div>
+                        <div class="p-price">25K-30K</div>
+                    </div>
+                    <div class="line-2 flex">
+                        <span>腾讯科技</span>
+                        <span>10000人以上</span>
+                        <span>互联网</span>
+                    </div>
+                    <div class="line-3 flex">
+                        <div>本科</div>
+                        <div>Java</div>
+                        <div>5年工作经验</div>
+                    </div>
+                    <div class="line-4 flex">
+                        <div class="line-4-item flex">
+                            <i class="icon iconfont iconperson"></i>
+                            <p>招聘人数 5</p>
+                        </div>
+                        <div class="line-4-item flex">
+                            <i class="icon iconfont iconlocation"></i>
+                            <p>上海|浦东</p>
+                        </div>
+                        <div class="line-4-item flex">
+                            <i class="icon iconfont icondate"></i>
+                            <p>2020/03/05</p>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

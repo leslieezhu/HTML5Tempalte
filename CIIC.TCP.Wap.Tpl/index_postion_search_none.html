@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="css/common_none.css" />
+    <title>智招聘-职位信息列表</title>
+    <script language="javascript" type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <!-- <script language="javascript" type="text/javascript" src="js/common.js?version=1.1.1"></script> -->
+    <script>
+
+
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="out-sousou">
+        <div class="top-sousou">
+            <form @submit.prevent action="#">
+                <div class="form-div flex">
+                    <input type="search" placeholder="搜索公司/职位" @blur="animateWidth" v-model="SearchText"
+                        @keypress="search" ref="input" />
+                    <div class="out-i flex">
+                        <i class="icon iconfont iconmagnifier"></i>|<i class="icon iconfont iconfilter"></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="content">
+        <div class="index-btn-box">
+            <div class="index-btn-item">
+
+            </div>
+        </div>
+        <div class="show_msg">
+            <p>很抱歉，未能搜索到你要的结果！</p>
+            <p>换个关键字试试看！</p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

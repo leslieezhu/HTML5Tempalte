@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+html {
+  font-size: calc(100vw / 7.5);
+}
+
+body {
+  overflow-x: hidden;
+  color: #333;
+}
+
+img,
+button {
+  display: block;
+}
+
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 15px;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+/* 第一部分 容器*/
+.page .title {
+  display: flex;
+  position: relative;
+  padding: 0 15px;
+  width: 100%;
+  height: 4.18rem;
+  background-image: url("../images/bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 搜索框样式-最外层圆弧div */
+.top-sousou {
+  padding: 0 20px;
+  width: 87%;
+  /* height: 0.61rem; */
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 0.35rem;
+  position: absolute;
+  bottom: 0.6rem;
+}
+
+/* 搜索框高度 */
+.form-div {
+  height: 0.81rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.top-sousou input {
+  font-size: 0.35rem;
+  color: #888888;
+  width: 87%;
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+}
+
+.form-div div {
+  height: 100%;
+  align-items: center;
+}
+
+.iconmagnifier {
+  margin-right: 6px;
+}
+
+.iconfilter {
+  margin-left: 6px;
+}
+
+.top-sousou i,
+.out-i {
+  color: #DDDDDD;
+  font-size: 0.31rem;
+}
+
+
+/* 第二部分 */
+.content .postion-crumb,
+.line-1 {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* 职位信息数量行和字体相关 */
+.postion-crumb>div,
+.line-1 div {
+  font-size: 0.38rem;
+  font-weight: bolder;
+  margin: 0 0 10px 0;
+}
+
+.line-1 .p-price {
+  color: #44A8E1;
+}
+
+.line-2,
+.line-3 {
+  margin-top: 10px;
+}
+
+.line-2 span {
+  font-size: 0.3rem;
+  margin-right: 10px;
+}
+
+.line-3 div,
+.line-4 {
+  font-size: 0.28rem;
+}
+
+/* TO Review 
+.postion-crumb .align-ico {
+  max-height: 1.3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.postion-crumb i {
+  font-size: 0.4rem;
+  margin-bottom: 0.1rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.postion-crumb p {
+  font-size: 0.18rem;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+}
+*/
+.index-btn-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.line-3 div {
+  color: #666666;
+  padding: 0 5px 0 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid rgba(164, 173, 202, .3);
+  border-radius: .1rem;
+  margin-bottom: .3rem;
+  margin-right: .3rem;
+}
+
+.line-4 {
+  color: #666666;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.line-4-item i {
+  color: #888888;
+  margin-right: 6px;
+}
