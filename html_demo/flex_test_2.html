@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .content{
+      border: solid 1px #000000;
+    }
+    .content p {
+      font-size: 0.4rem;
+    }
+/*附加css样式,起美化作用*/
+html,body {
+  font-size: calc(100vw / 7.5);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  color: #333;
+}
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 必要布局样式css,最外层容器 display: flex*/
+.aui-flexView {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.aui-scrollView {
+    width: 100%;
+    height: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    margin-top:0;
+    margin-bottom: 1.5rem;
+}
+
+.aui-footer {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 7px 10px 7px 10px;
+    background: #ffffff;
+}
+
+.aui-footer:after{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #dcdcdc;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+/*关键css,实现元素(foot)在窗口置底, 核心css position:fixed;...; 与父容器.aui-flexView, 相邻块.aui-scrollView css 设置无直接关系*/
+.aui-footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 49;
+}
+/*确定按钮样式*/
+.aui-tabBar-item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; /*(1).效果是抢占整个空间,(2).子元素上属性,flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选*/
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    background:#44a8e1;
+    border-radius:3px;
+    height:1.2rem;
+    line-height:1.2rem;
+}
+  </style>
+</head>
+<body>
+  <div class="aui-flexView">
+    <div class="aui-scrollView">
+      <div class="content">
+          <h6>
+            理性看待短期波动，资本市场广获青睐——国际投资者对中国经济企稳信心足
+          </h6>
+          <p>
+            中国最新发布的一季度经济数据引发了全球投资者对中国经济走势的关注。国际投资者普遍认为，在中国国内强力防控疫情和海外疫情冲击外需的情况下，一季度中国经济增速符合预期；展望后续发展，各方不仅对中国经济企稳复苏抱有信心，同时认为中国资本市场正在获得全球资本青睐。
+          
+            -6.8%的增速虽然引发各方关注，但并不出乎意料。星展银行认为，考虑到中国政府应对疫情采取了强力措施，经济活动暂停势必带来经济收缩。全球资产管理公司投资经理罗布·芒福德表示，中国有序推进复工复产逐步恢复供给能力，但其他国家疫情蔓延造成了外部需求不振，一季度数据下降在预料之中。
+          
+            事实上，国际投资者将更多的注意力集中在中国经济后续表现上。对比一季度与全年其他季度预期表明，投资者对中国经济后续增长颇具信心。
+          
+            芒福德表示，未来中国经济增速取决于国内外疫情防控进展与相关政策支持这两大因素。目前，这些因素都展现出有利于中国的迹象。在疫情防控层面，越来越多的国家开始采取正确的防控手段与措施，大概率将在短期内有效控制疫情。在政策方面，中国政府为稳定就业采取了一系列财政政策和货币政策，同时在推动经济结构调整与维持总量稳定增长之间保持平衡。
+          
+            花旗财富管理公司认为，疫情对中国经济的影响或集中在一季度，投资、零售等虽然出现大幅下滑，但最糟糕的时候已经过去。澳新银行也认为，随着复工复产加速推进，以及此前受压抑的消费进一步释放，预计将推升中国年度经济增速由负转正。渣打银行有关人士认为，3月份的数据已经显示中国经济活动明显改善，工业产出降幅收窄、服务业进一步复苏，预计随后3个季度的增速将稳步提升。
+          
+            同时，对比不同国家的经济增长预期，更能体现中国宏观经济的韧性。芒福德表示，在国际货币基金组织（IMF）的预计中，主要发达经济体在2020年将出现6%左右的经济萎缩，中国依然能够保持一定规模的正增长；在IMF预计全球经济复苏增长的2021年，中国9.2%的预期增长率也是主要发达经济体的两倍以上。
+          
+            投资者对于中国宏观经济韧性的认可，很大程度上来自于对中国政府政策工具和宏观管理能力的认可。西班牙外换银行研究报告显示，在应对全球经济衰退之际，中国政府将会采取相应的财政和货币政策来维持经济增长，并避免金融风险。值得庆幸的是，中国政府有着充足的财政政策与货币政策工具。
+          
+            值得关注的是，基于中国经济相较于其他发达经济体的增速红利、中国政府应对经济周期负面冲击的能力，芒福德认为中国资产正在受到越来越多的全球投资者青睐。
+          
+            事实上，中国股市在一季度已经成为新兴市场的稳定力量。标普道琼斯指数公司股票指数副总监约翰·威灵日前表示，在近期市场环境中，中国股市与其他新兴市场相比波动性更低，汇率波动最小，受油价下跌影响更少。荷宝海外投资基金管理公司表示，与传统服务业企业相比，科技企业受疫情影响较小，而且中国政府将继续投资科技驱动型行业，因而投资者尤为看好中国科技类企业。
+          
+            在债券市场方面，彭博社日前刊文表示，在疫情冲击资本市场情况下，中国债券吸引了全球资本。彭博社认为，尽管中国十年期国债收益率不断下滑，但中美同类债券利差已扩大至15年来的新高。与此同时，中国主权债务风险一直保持相对稳定，低于南亚和东南亚国家水平。这些都将提升以人民币计价的主权债券对海外投资者的吸引力。
+          </p>
+      </div>
+    </div>
+    <footer class="aui-footer aui-footer-fixed">
+        <a class="aui-tabBar-item">
+            确定
+        </a>
+    </footer>
+  </div>
+</body>
+</html>
