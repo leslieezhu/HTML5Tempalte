@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>实现滚动到一定位置时，导航栏置顶的效果</title>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/jquery-1.8.3.min.js"
+    ></script>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 40px;
+        font-family: "微软雅黑";
+        text-align: center;
+        line-height: 100px;
+        width: 100%;
+      }
+      .banner {
+        width: 100%;
+        height: 50px;
+        background: pink;
+      }
+      .banner ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 100px;
+        line-height: 50px;
+      }
+      a {
+        color: gray;
+        text-decoration: none;
+      }
+      .fixDiv {
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      /*测试部分*/
+
+      .test {
+        background: #6495ed;
+        height: 2000px;
+        padding-top: 100px;
+      }
+
+      .fixnav {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>标题1</h1>
+    <h1>标题2</h1>
+    <h1>标题1</h1>
+    <h1>标题2</h1>
+    <div class="banner">
+      <ul>
+        <li><a href="#">标题1</a></li>
+        <li><a href="#">标题1</a></li>
+        <li><a href="#">标题1</a></li>
+        <li><a href="#">标题1</a></li>
+        <li><a href="#">标题1</a></li>
+      </ul>
+    </div>
+    <div class="test">这个区域仅仅是用于测试的</div>
+  </body>
+  <script type="text/javascript">
+    $(function () {
+      var banOffTop = $(".banner").offset().top; //获取到距离顶部的垂直距离
+      var scTop = 0; //初始化垂直滚动的距离
+      $(document).scroll(function () {
+        scTop = $(this).scrollTop(); //获取到滚动条拉动的距离
+        console.log(scTop);//查看滚动时，垂直方向上，滚动条滚动的距离
+        if (scTop >= banOffTop) {
+          //核心部分：当滚动条拉动的距离大于等于导航栏距离顶部的距离时，添加指定的样式
+          $(".banner").addClass("fixDiv");
+        } else {
+          $(".banner").removeClass("fixDiv");
+        }
+      });
+    });
+  </script>
+</html>
