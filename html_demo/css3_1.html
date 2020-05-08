@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>利用css3实现侧边栏</title>
+  <style>
+    /* http://www.jq22.com/demo/jquery-css3-150315214850/index4.html */
+    @import url(http://www.jq22.com/jquery/font-awesome.4.6.0.css);
+    @import url(https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,300);
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      display: block;
+    }
+
+    body {
+      text-align: center;
+      background: #EFEFEF;
+      color: #fff;
+    }
+
+    .container {
+      width: 285px;
+      height: 500px;
+      margin: 0 auto;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cover {
+      width: 100%;
+      height: 100%;
+      background: url("./img/mb1.png") no-repeat 100% 100%;
+      transition: all 0.25s;
+      position: relative;
+      z-index: 99;
+    }
+
+    label {
+      padding: 10px;
+      border: 2px solid #fff;
+      position: relative;
+      top: 200px;
+      cursor: pointer;
+    }
+
+    ul {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 150px;
+      background: #2f3238;
+      padding-top: 50px;
+    }
+
+    li {
+      line-height: 48px;
+    }
+
+    .container i {
+      display: block;
+      width: 50px;
+      float: left;
+      font-size: 16px;
+      line-height: 48px;
+      text-align: center;
+    }
+
+    .container b {
+      display: block;
+      opacity: 0;
+      transform: translateX(150px);
+      transition: all 0.4s;
+    }
+
+    input:checked+.container .cover {
+      transform: translateX(150px);
+    }
+
+    input:checked+.container b {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    input:checked+.container li:nth-child(1) b {
+      transition-delay: 0.08s;
+    }
+
+    input:checked+.container li:nth-child(2) b {
+      transition-delay: 0.16s;
+    }
+
+    input:checked+.container li:nth-child(3) b {
+      transition-delay: 0.24s;
+    }
+
+    input:checked+.container li:nth-child(4) b {
+      transition-delay: 0.32s;
+    }
+
+    input:checked+.container li:nth-child(5) b {
+      transition-delay: 0.40s;
+    }
+
+    input:checked+.container li:nth-child(6) b {
+      transition-delay: 0.48s;
+    }
+  </style>
+</head>
+
+<body>
+  <body>
+    <input type="checkbox" style="display: none" id="selected">
+    <div class="container">
+      <div class="cover"><label for="selected">Click Me</label></div>
+      <ul>
+        <li><a href="javascript:;"><i class="fa fa-check"></i><b>Tasks</b></a></li>
+
+        <li><a href="javascript:;"><i class="fa fa-inbox"></i><b>Messages</b></a></li>
+
+        <li><a href="javascript:;"><i class="fa fa-pencil"></i><b>New Post</b></a></li>
+
+        <li><a href="javascript:;"><i class="fa fa-cog"></i><b>Settings</b></a></li>
+
+        <li><a href="javascript:;"><i class="fa fa-star"></i><b>Starred</b></a></li>
+
+        <li><a href="javascript:;"><i class="fa fa-power-off"></i><b>Logout</b></a></li>
+      </ul>
+    </div>
+  </body>
+
+</html>
