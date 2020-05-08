@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>演示flex-basis,它设置子元素的基准值</title>
+  <style type="text/css">
+    /*理解flex弹性布局之flex-grow用于"弹性"抢占空间(如水平方向)的情况*/
+    .parent {
+        display: flex;
+        width: 600px;/*主轴上父容器总width为 600px*/
+    }
+    .parent > div {
+        height: 100px;
+    }
+    /*3个子元素的基准值(flex-basis)之和 0% + auto + 200px = 300px,根据此值求水平方向的剩余值,这个值会被flex-grow用到*/
+    .item-1 {   
+        width: 140px;
+        flex: 2 1 0%;  /*0% 即 0 宽度*/
+        background: blue;
+    }
+    .item-2 {
+        width: 100px;
+        flex: 2 1 auto;  /*这里 auto 对应取元素的width值即 100px*/
+        background: darkblue;
+    }
+    .item-3 {
+        flex: 1 1 200px;
+        background: lightblue;
+    }
+</style>
+</head>
+<body>
+  <div class="parent">
+    <div class="item-1"></div>
+    <div class="item-2"></div>
+    <div class="item-3"></div>
+  </div>
+
+
+</body>
+</html>
